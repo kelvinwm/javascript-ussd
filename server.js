@@ -16,14 +16,14 @@ app.post('*', (req, res) => {
     let { sessionId, serviceCode, phoneNumber, text } = req.body
     if (text == '') {
         // This is the first request. Note how we start the response with CON
-        let response = `CON What would you want to check
-    1. My Account
-    2. My phone number`
+        let response = `CON Welcome to changia services\nWhat would you do today
+    1. Create A new Contribution Account
+    2. My Contribution Accounts`
         res.send(response)
     } else if (text == '1') {
         // Business logic for first level response
         let response = `CON Choose account information you want to view
-    1. Account number sita
+    1. Account number
     2. Account balance`
         res.send(response)
     } else if (text == '2') {
