@@ -23,7 +23,7 @@ app.post('*', (req, res) => {
     } else if (text == '1') {
         // Business logic for first level response
         let response = `CON Choose account information you want to view
-    1. Account number
+    1. Account number sita
     2. Account balance`
         res.send(response)
     } else if (text == '2') {
